@@ -40,7 +40,7 @@ const App = (props) => {
       <div className="container">
         <MovieHeader/>
         <div className="row ">
-          <FavoriteMovieList favoriteMovies={favoriteMovies}/>
+          <FavoriteMovieList favoriteMovies={favoriteMovies} />
         
           <Switch>
 
@@ -53,7 +53,7 @@ const App = (props) => {
             </Route>
 
             <Route path="/movies/:id">
-              <Movie setMovies={setMovies} />
+              <Movie setMovies={setMovies} setFavoriteMovies={setFavoriteMovies} movies={movies} favoriteMovies={favoriteMovies} />
             </Route>
 
             <Route path="/movies">
